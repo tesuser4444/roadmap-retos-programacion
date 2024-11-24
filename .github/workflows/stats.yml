@@ -1,0 +1,26 @@
+name: Stats
+
+on: 
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+     - name: Checkout Repo
+       uses: actions/checkout@v4
+     - name: Setup python
+       uses: actions/setup-python@v5
+       with:
+         python-version: '3.11'
+     - name: Run python
+       run: python ./Roadmap/stats.py 
+     - name: Commit and push to repo
+       uses: stefanzweifel/git-auto-commit-action@v5
+       with:
+         commit_message: Update Stats
+         commit_user_name: Jroge [Github Actions]
+         commit_user_email: motorocool@gmail.com
+         commit_author: jrogito

@@ -21,6 +21,6 @@ jobs:
        uses: stefanzweifel/git-auto-commit-action@v5
        with:
          commit_message: Update Stats
-         commit_user_name: Jroge [Github Actions]
+         commit_user_name: Jorge Tirado Sandoval
          commit_user_email: motorocool@gmail.com
-         commit_author: jrogito
+         commit_author: tesuser4444
